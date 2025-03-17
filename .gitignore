@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build directories
+dist
+dist-ssr
+build
+out
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local development
+*.local
+
+# Testing
+coverage
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache and temporary files
+.cache
+.temp
+.tmp
+.eslintcache
+.stylelintcache
+
+# React/Vite specific
+.vercel
+.netlify
+
+# OS specific
+Thumbs.db
+desktop.ini
