@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import './GruvboxTheme.css'
 
 function App() {
   // State for mobile menu toggle
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   // State for theme toggle (dark/light)
-  const [isDarkMode, setIsDarkMode] = useState(false) // Changed from true to false
+  const [isDarkMode, setIsDarkMode] = useState(false) 
 
-  // Apply theme class to body when theme changes
   useEffect(() => {
     document.body.className = isDarkMode ? 'gruvbox-dark' : 'gruvbox-light'
   }, [isDarkMode])
@@ -41,6 +39,7 @@ function App() {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -72,34 +71,31 @@ function App() {
         <div className="projects-grid">
           {/* Project 1 */}
           <div className="project-card">
-            <div className="project-image placeholder-image">Project Image</div>
-            <h3>Project Name</h3>
-            <p>Brief description of the project, technologies used, and your role.</p>
+            
+            <h3>Online Shop in C#</h3>
+            <p>Somewhat of a Amazon Shop copy. I used .NET MVC structure. Database in Postgresql.</p>
             <div className="project-links">
-              <a href="#" className="btn small-btn">View Project</a>
-              <a href="#" className="btn small-btn">Source Code</a>
+              <a href="https://github.com/miloszfede/Online-shop-in-C-" className="btn small-btn">Source Code</a>
             </div>
           </div>
           
           {/* Project 2 */}
           <div className="project-card">
-            <div className="project-image placeholder-image">Project Image</div>
-            <h3>Project Name</h3>
-            <p>Brief description of the project, technologies used, and your role.</p>
+            
+            <h3>Filmweb</h3>
+            <p>Still in progress, I'm doing big database of movies, using .NET Web Api and for Frontend React with Typescript. DB in SQLite.</p>
             <div className="project-links">
-              <a href="#" className="btn small-btn">View Project</a>
-              <a href="#" className="btn small-btn">Source Code</a>
+              <a href="https://github.com/miloszfede/filmweb" className="btn small-btn">Source Code</a>
             </div>
           </div>
           
           {/* Project 3 */}
           <div className="project-card">
-            <div className="project-image placeholder-image">Project Image</div>
-            <h3>Project Name</h3>
-            <p>Brief description of the project, technologies used, and your role.</p>
+            
+            <h3>Assembly Simulator</h3>
+            <p>Assembly Simulator I did for my Architecture of Computer systems course. It simmulates commands you can do for memory in 8086 processor.</p>
             <div className="project-links">
-              <a href="#" className="btn small-btn">View Project</a>
-              <a href="#" className="btn small-btn">Source Code</a>
+              <a href="https://github.com/miloszfede/Assembly-Simulator" className="btn small-btn">Source Code</a>
             </div>
           </div>
         </div>
@@ -178,20 +174,40 @@ function App() {
             <div className="timeline-content">
               <h3>Barista</h3>
               <h4>Bonjour Cava</h4>
-              <p>Customer Service</p>
+              <p>Customer Service, Sales</p>
             </div>
           </div>
-          
-          {/* Education */}
+
           <div className="timeline-item">
-            <div className="timeline-date">2024 - 2027</div>
+            <div className="timeline-date">2020 - 2022</div>
             <div className="timeline-content">
-              <h3>Applied Informatics</h3>
-              <h4>Wyższa Szkoła Ekonomii i informatyki w Krakowie</h4>
-              <p>Stydying informatics and programming mostly in Microsoft tech stack</p>
+              <h3>Cashier</h3>
+              <h4>Żabka</h4>
+              <p>Customer Service, Sales</p>
             </div>
           </div>
         </div>
+      </section>
+
+        {/* Education */}
+
+        <section id="education" className="education-section">
+          <h2 className="section-title">Education</h2>
+          <div className="timeline-content">
+            <div className="education-timeline">2024 - 2027</div>
+              <h3>Applied Informatics</h3>
+              <h4>Wyższa Szkoła Ekonomii i informatyki w Krakowie</h4>
+              <p>Stydying informatics and programming mostly in Microsoft tech stack</p>
+          </div>
+
+          <br></br>
+          
+            <div className = "timeline-content">
+            <div className="education-timeline">02.2024 - 03.2025</div>
+              <h3>Fullstack Web Developer</h3>
+              <h4>Codecool</h4>
+              <p>Studied technologies and did projects in Python, JavaScript, React, C#, ASP .NET Core. I used Postgresql, SQLite and GIT.</p>
+            </div>
       </section>
 
       {/* Contact Section */}
