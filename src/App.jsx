@@ -27,12 +27,6 @@ function App() {
           <h1 className="logo">Portfolio</h1>
         </div>
         
-        <div className="right-controls">
-          <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <span className="menu-icon"></span>
-          </button>
-        </div>
-        
         <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
           <ul>
             <li><a href="#about">About</a></li>
@@ -43,6 +37,15 @@ function App() {
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <div className="right-controls">
+          <button 
+            className="mobile-menu-btn" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
       </header>
 
       {/* Hero Section */}
